@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прогноз погоды</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Прогноз погоды</h1>
+        
+      <div class="search">
+            <input type="text" id="cityInput" placeholder="Введите город...">
+            <button onclick="fetchWeather()">Поиск</button>
+        </div>
+
+        <div class="city-name" id="cityName"></div>
+        <div class="current-weather" id="currentWeather"></div>
+        <div class="forecast" id="forecast"></div>
+
+        <div class="unit-toggle">
+            <label>
+                <input type="checkbox" id="unitToggle" onchange="toggleUnit()"> 
+                Показать в °F
+            </label>
+        </div>
+        <button class="location-btn" onclick="fetchLocationWeather()">Моя локация</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
